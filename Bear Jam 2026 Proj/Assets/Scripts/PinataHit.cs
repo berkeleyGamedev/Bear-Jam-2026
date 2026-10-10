@@ -3,6 +3,7 @@ using UnityEngine;
 public class PinataHit : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private PinataBehavior behavior;
     public float force;
 
     public PinataStats stats;
@@ -19,6 +20,7 @@ public class PinataHit : MonoBehaviour
     private void Awake()
     {      
         rb = GetComponent<Rigidbody2D>();
+        behavior = GetComponent<PinataBehavior>();
         currentScale = stats.startScale;
         currentKBMult = stats.startKBMult;
         currentHealth = stats.health;
@@ -49,7 +51,7 @@ public class PinataHit : MonoBehaviour
         } else
         {
             counter = 0;
-            rb.linearVelocity += (Vector2)transform.up * 30;
+            //rb.linearVelocity += (Vector2)transform.up * 30;
         }
 
     }
@@ -65,7 +67,8 @@ public class PinataHit : MonoBehaviour
         Vector2 rotatedVector = new Vector2(hitVector.x * Mathf.Cos(theta) - hitVector.y * Mathf.Sin(theta),
             hitVector.x * Mathf.Sin(theta) + hitVector.y * Mathf.Cos(theta));
         //rb.AddForce(-1 * hitVector.normalized * force, ForceMode2D.Impulse);
-        rb.linearVelocity += -1 * rotatedVector.normalized * (force * currentKBMult);
+        //rb.linearVelocity += -1 * rotatedVector.normalized * (force * currentKBMult);
+        behavior.GetKnockback(-1 * rotatedVector.normalized * (force * currentKBMult));
         currentScale += stats.scaleIncPerHit;
         currentScale = Mathf.Clamp(currentScale, 0, stats.scaleMax);
 

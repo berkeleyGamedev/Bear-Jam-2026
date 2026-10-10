@@ -1,16 +1,28 @@
+using System.Collections;
 using UnityEngine;
 
-public class PinataBehavior : MonoBehaviour
+public abstract class PinataBehavior : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected Vector2 behaviorVelocity;
+    protected Vector2 knockbackVelocity;
+
+    protected Rigidbody2D rb;
+
+    protected virtual void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void FixedUpdate()
     {
-        
+        rb.linearVelocity = rb.linearVelocity + behaviorVelocity + knockbackVelocity;
+        knockbackVelocity = Vector2.zero;
+        behaviorVelocity = Vector2.zero;
     }
+
+    public void GetKnockback(Vector2 KB)
+    {
+        knockbackVelocity = KB;
+    }
+    public abstract IEnumerator Behaviors();
 }

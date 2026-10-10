@@ -1196,7 +1196,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795197155}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -2135,6 +2135,7 @@ GameObject:
   - component: {fileID: 1960367292}
   - component: {fileID: 1960367295}
   - component: {fileID: 1960367299}
+  - component: {fileID: 1960367303}
   - component: {fileID: 1960367302}
   - component: {fileID: 1960367294}
   - component: {fileID: 1960367293}
@@ -2189,8 +2190,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -28.117651
-    m_UpperAngle: 206.11243
+    m_LowerAngle: -3.8133092
+    m_UpperAngle: 182.07462
 --- !u!50 &1960367294
 Rigidbody2D:
   serializedVersion: 5
@@ -2205,7 +2206,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 5
   m_LinearDamping: 0
-  m_AngularDamping: 0.69
+  m_AngularDamping: 2
   m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2462,6 +2463,18 @@ MonoBehaviour:
   - {fileID: 243046199656692619, guid: db6613098a9822247a001f717cdb8e8b, type: 3}
   - {fileID: 8813178923077739305, guid: db6613098a9822247a001f717cdb8e8b, type: 3}
   - {fileID: 5964949617211211890, guid: db6613098a9822247a001f717cdb8e8b, type: 3}
+--- !u!114 &1960367303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960367291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b794d76ac9bcad4a842c47eed70b815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lvl1Behavior
 --- !u!1 &2058076083
 GameObject:
   m_ObjectHideFlags: 0
