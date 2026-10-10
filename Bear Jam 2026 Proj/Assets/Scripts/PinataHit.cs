@@ -10,6 +10,11 @@ public class PinataHit : MonoBehaviour
     private float currentKBMult;
     [SerializeField] private float currentHealth;
 
+    public delegate void OnHit(Vector2 mousePos);
+    public static event OnHit onHit;
+
+    private float counter;
+
 
     private void Awake()
     {      
@@ -24,6 +29,8 @@ public class PinataHit : MonoBehaviour
     {
         //Bandaid "spawn animation"
         transform.localScale = 0.1f * Vector3.one;
+
+        counter = 0;
     }
 
     // Update is called once per frame
@@ -34,15 +41,31 @@ public class PinataHit : MonoBehaviour
         transform.localScale = ExpDecay(transform.localScale, targetScale, 16, Time.deltaTime);
     }
 
+    private void FixedUpdate()
+    {
+        if(counter < 2)
+        {
+            counter += Time.fixedDeltaTime;
+        } else
+        {
+            counter = 0;
+            rb.linearVelocity += (Vector2)transform.up * 30;
+        }
+
+    }
+
+
     public void Takehit(Vector2 mousePos)
     {
+        onHit.Invoke(mousePos);
+
         Vector2 hitVector = mousePos - rb.position;
         hitVector = hitVector.normalized;
         float theta = Random.Range(-20, 20);
         Vector2 rotatedVector = new Vector2(hitVector.x * Mathf.Cos(theta) - hitVector.y * Mathf.Sin(theta),
             hitVector.x * Mathf.Sin(theta) + hitVector.y * Mathf.Cos(theta));
         //rb.AddForce(-1 * hitVector.normalized * force, ForceMode2D.Impulse);
-        rb.linearVelocity = -1 * rotatedVector.normalized * (force * currentKBMult);
+        rb.linearVelocity += -1 * rotatedVector.normalized * (force * currentKBMult);
         currentScale += stats.scaleIncPerHit;
         currentScale = Mathf.Clamp(currentScale, 0, stats.scaleMax);
 

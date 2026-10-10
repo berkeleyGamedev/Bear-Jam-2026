@@ -1,10 +1,17 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 
 public class GunFollow : MonoBehaviour
 {
     private Vector2 mousePos;
     public Vector2 offset;
     public AudioSource source;
+
+    public AnimationCurve shootCurve;
+    public float shootDuration;
+    public float rotateAmount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,5 +50,23 @@ public class GunFollow : MonoBehaviour
                 pinata.Takehit(mousePos);
             }
         }
+
+        StopAllCoroutines();
+        StartCoroutine(ShootAnim());
+    }
+
+
+    IEnumerator ShootAnim()
+    {
+        float t = 0;
+        transform.rotation = Quaternion.identity;
+        while(t < shootDuration)
+        {
+            Quaternion finalRot = Quaternion.Euler(0, 0, rotateAmount);
+            transform.rotation = Quaternion.Lerp(Quaternion.identity, finalRot, shootCurve.Evaluate(t/shootDuration));
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = Quaternion.identity;
     }
 }
