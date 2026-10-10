@@ -23,5 +23,7 @@ public class InduceForce : MonoBehaviour
             dir = dir.normalized;
             rb.AddForce(dir * force, ForceMode2D.Impulse);
         }
+
+        rb.linearVelocity += (Vector2)transform.right * force;
     }
 }
