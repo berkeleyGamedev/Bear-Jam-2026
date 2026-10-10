@@ -5,20 +5,16 @@ public class PinataHit : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
 
-    public float scalePerHit;
-    public float scaleMax;
+    public PinataStats stats;
     private float currentScale;
-
-    [Header("KnockBack")]
-    public float knockbackMultStart;
-    public float knockbackMultIncrease;
-    public float knockbackMultMax;
+    private float currentKBMult;
 
 
     private void Awake()
     {      
         rb = GetComponent<Rigidbody2D>();
-        currentScale = 1;
+        currentScale = stats.startScale;
+        currentKBMult = stats.startKBMult;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,13 +34,17 @@ public class PinataHit : MonoBehaviour
     public void Takehit(Vector2 mousePos)
     {
         Vector2 hitVector = mousePos - rb.position;
+        hitVector = hitVector.normalized;
+        float theta = Random.Range(-20, 20);
+        Vector2 rotatedVector = new Vector2(hitVector.x * Mathf.Cos(theta) - hitVector.y * Mathf.Sin(theta),
+            hitVector.x * Mathf.Sin(theta) + hitVector.y * Mathf.Cos(theta));
         //rb.AddForce(-1 * hitVector.normalized * force, ForceMode2D.Impulse);
-        rb.linearVelocity = -1 * hitVector.normalized * (force * knockbackMultStart);
-        currentScale += scalePerHit;
-        currentScale = Mathf.Clamp(currentScale, 0, scaleMax);
+        rb.linearVelocity = -1 * rotatedVector.normalized * (force * currentKBMult);
+        currentScale += stats.scaleIncPerHit;
+        currentScale = Mathf.Clamp(currentScale, 0, stats.scaleMax);
 
-        knockbackMultStart += knockbackMultIncrease;
-        knockbackMultStart = Mathf.Clamp(knockbackMultStart, 0, knockbackMultMax);
+        currentKBMult += stats.KBMultIncPerHit;
+        currentKBMult = Mathf.Clamp(currentKBMult, 0, stats.KBMax);
     }
 
     Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
