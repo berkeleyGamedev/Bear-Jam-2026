@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50038683ad2d3d04086dd5c3f6eb0777, type: 3}
   m_Name: BasePinata
   m_EditorClassIdentifier: Assembly-CSharp::PinataStats
-  health: 4
+  health: 40
   scoreOnDeath: 100
   startScale: 1
   scaleIncPerHit: 0.2

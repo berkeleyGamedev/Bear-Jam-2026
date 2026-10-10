@@ -8,6 +8,7 @@ public class PinataHit : MonoBehaviour
     public PinataStats stats;
     private float currentScale;
     private float currentKBMult;
+    [SerializeField] private float currentHealth;
 
 
     private void Awake()
@@ -15,12 +16,14 @@ public class PinataHit : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentScale = stats.startScale;
         currentKBMult = stats.startKBMult;
+        currentHealth = stats.health;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Bandaid "spawn animation"
+        transform.localScale = 0.1f * Vector3.one;
     }
 
     // Update is called once per frame
@@ -45,6 +48,12 @@ public class PinataHit : MonoBehaviour
 
         currentKBMult += stats.KBMultIncPerHit;
         currentKBMult = Mathf.Clamp(currentKBMult, 0, stats.KBMax);
+
+        currentHealth -= 1;
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
