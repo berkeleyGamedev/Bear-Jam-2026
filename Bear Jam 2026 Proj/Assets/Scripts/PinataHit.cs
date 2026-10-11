@@ -77,6 +77,10 @@ public class PinataHit : MonoBehaviour
     void OnDeath()
     {
         PinataSpawner spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
+        if(transform.parent.TryGetComponent<SpawnAnim>(out var spawnAnim))
+        {
+            spawnAnim.DeathAnim();
+        }
         spawner.SpawnNewPinata();
         Destroy(gameObject);
     }

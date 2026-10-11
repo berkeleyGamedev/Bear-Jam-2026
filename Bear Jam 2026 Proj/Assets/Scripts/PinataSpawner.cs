@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class PinataSpawner : MonoBehaviour
     public List<PinataLevel> levels;
     private PinataLevel currentLevel;
     private int currentLevelRoundsLeft;
+    public float spawnDelay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +28,13 @@ public class PinataSpawner : MonoBehaviour
 
     public void SpawnNewPinata()
     {
-        if(currentLevelRoundsLeft <= 0)
+        StartCoroutine(SpawnPinata());
+    }
+
+    IEnumerator SpawnPinata()
+    {
+        yield return new WaitForSeconds(spawnDelay);
+        if (currentLevelRoundsLeft <= 0)
         {
             Debug.Log("Out of Pinata Rounds!");
             if (levels.Count > 1)
