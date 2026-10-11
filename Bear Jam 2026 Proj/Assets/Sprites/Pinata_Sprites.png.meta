@@ -146,15 +146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pinata_Sprites_1
+      name: Weed_Pinata
       rect:
         serializedVersion: 2
         x: 471
         y: 567
         width: 412
         height: 484
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5678071, y: 0.347829}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -168,15 +168,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pinata_Sprites_2
+      name: Rocket_Pinata
       rect:
         serializedVersion: 2
         x: 901
         y: 560
         width: 412
         height: 483
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5523963, y: 0.35014302}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,15 +190,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pinata_Sprites_3
+      name: Plushie
       rect:
         serializedVersion: 2
         x: 1379
         y: 559
         width: 419
         height: 482
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50909203, y: 0.36827374}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pinata_Sprites_4
+      name: Gay_Pinata
       rect:
         serializedVersion: 2
         x: 61
@@ -335,15 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Gay_Pinata: -5889331289996518433
       Pinata_Sprites_0: 5655269716020856251
-      Pinata_Sprites_1: -8190164896219414098
-      Pinata_Sprites_2: 529465996593962705
-      Pinata_Sprites_3: -6165953349038546448
-      Pinata_Sprites_4: -5889331289996518433
       Pinata_Sprites_5: -8202321182927688060
       Pinata_Sprites_6: 4927092631327721799
       Pinata_Sprites_7: 201364925482811910
       Pinata_Sprites_8: 8308965241241316903
+      Plushie: -6165953349038546448
+      Rocket_Pinata: 529465996593962705
+      Weed_Pinata: -8190164896219414098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

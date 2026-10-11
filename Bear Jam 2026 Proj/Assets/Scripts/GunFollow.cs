@@ -7,6 +7,7 @@ public class GunFollow : MonoBehaviour
 {
     private Vector2 mousePos;
     public Vector2 offset;
+    public Transform crosshairTransform;
     public AudioSource source;
 
     public AnimationCurve shootCurve;
@@ -14,6 +15,7 @@ public class GunFollow : MonoBehaviour
     public float rotateAmount;
 
     public GameObject whiffPrefab;
+    public GameObject hitParticles;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +26,8 @@ public class GunFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = crosshairTransform.position;
         UpdatePos();
 
         if (Input.GetMouseButtonDown(0))
@@ -43,13 +46,14 @@ public class GunFollow : MonoBehaviour
     void Shoot()
     {
         source.Play();
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Camera.main.WorldToScreenPoint(mousePos));
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
         if (hit)
         {
             if(hit.transform.TryGetComponent<PinataHit>(out PinataHit pinata))
             {
+                Instantiate(hitParticles, mousePos, Quaternion.identity);
                 pinata.Takehit(mousePos);
             }
         } else
