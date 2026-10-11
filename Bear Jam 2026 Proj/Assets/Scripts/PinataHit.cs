@@ -64,9 +64,11 @@ public class PinataHit : MonoBehaviour
         currentKBMult += stats.KBMultIncPerHit;
         currentKBMult = Mathf.Clamp(currentKBMult, 0, stats.KBMax);
 
+        ScoreTracker.instance.IncreaseCombo();
         currentHealth -= 1;
         if(currentHealth <= 0)
         {
+            ScoreTracker.instance.IncreaseScore((int)stats.scoreOnDeath);
             OnDeath();
         }
 
