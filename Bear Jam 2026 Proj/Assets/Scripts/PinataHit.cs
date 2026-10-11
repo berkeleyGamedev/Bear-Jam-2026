@@ -77,6 +77,8 @@ public class PinataHit : MonoBehaviour
     void OnDeath()
     {
         PinataSpawner spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
+
+        // FIX LATER !!!!!!!!!! THIS IS SPAGETTI BULLSHIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if(transform.parent.TryGetComponent<SpawnAnim>(out var spawnAnim))
         {
             spawnAnim.DeathAnim();
