@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6936045182691457654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 800596958737916501, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.28000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013332235012799458, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573380205359442778, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938135842627736752, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.0017051548
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938135842627736752, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423863381368573377, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.42999983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803837386230411360, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524647819687208425, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.28000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154595486737080810, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      propertyPath: m_Name
+      value: Pinata Encounter Anchor Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7242333361818954329, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1761699462151123443}
+  m_SourcePrefab: {fileID: 100100000, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+--- !u!1 &342317047424733231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7242333361818954329, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+  m_PrefabInstance: {fileID: 6936045182691457654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1761699462151123443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342317047424733231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60be1da0c4599384aa2875c283f6f79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnchorBehavior
+  behavior: 1
+  duration: 2
+  startPoint: {x: 1.33, y: 0}
+  endPoint: {x: -3, y: 0}
+  lerpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  origin: {x: 0, y: 2.6}
+  xAxis: 2
+  yAxis: 1.38
+  rotateSpeed: 2.2

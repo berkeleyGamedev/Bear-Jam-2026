@@ -1288,7 +1288,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!233 &3938135842627736752
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1514,6 +1514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d110acc42d1c54794f317d44369574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnim
+  playAnimOnStart: 0
   startScale: 0
   endScale: 0
   duration: 0

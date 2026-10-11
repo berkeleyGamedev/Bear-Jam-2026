@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d110acc42d1c54794f317d44369574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnim
-  playAnimOnAwake: 1
+  playAnimOnStart: 1
   startScale: 0.01
   endScale: 0.2
   duration: 0
