@@ -3,17 +3,27 @@ using UnityEngine;
 
 public class SpawnAnim : MonoBehaviour
 {
-    public bool playAnimOnAwake;
+    public bool playAnimOnStart;
     public float startScale;
     public float endScale;
     public float duration;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (playAnimOnAwake)
+        if (playAnimOnStart)
         {
            StartCoroutine(Expand());
         }
+    }
+
+    private void OnEnable()
+    {
+        GameManager.onGameStart += DeathAnim;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.onGameStart -= DeathAnim;
     }
 
     // Update is called once per frame

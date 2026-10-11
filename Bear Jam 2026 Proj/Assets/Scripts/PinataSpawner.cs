@@ -8,13 +8,30 @@ public class PinataSpawner : MonoBehaviour
     [SerializeField] private int pinataNumber;
     public List<PinataLevel> levels;
     private PinataLevel currentLevel;
+    private int currentLevelIndex;
     private int currentLevelRoundsLeft;
     public float spawnDelay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+    }
+
+    private void OnEnable()
+    {
+        GameManager.onGameStart += InitializeLevels;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.onGameStart -= InitializeLevels;
+    }
+
+    void InitializeLevels()
+    {
         pinataNumber = 0;
+        currentLevelIndex = 0;
         currentLevel = levels[0];
         currentLevelRoundsLeft = currentLevel.numberOfRounds;
         SpawnNewPinata();
@@ -37,11 +54,11 @@ public class PinataSpawner : MonoBehaviour
         if (currentLevelRoundsLeft <= 0)
         {
             Debug.Log("Out of Pinata Rounds!");
-            if (levels.Count > 1)
+            if (currentLevelIndex < levels.Count - 1)
             {
-                levels.RemoveAt(0);
+                currentLevelIndex++;
             }
-            currentLevel = levels[0];
+            currentLevel = levels[currentLevelIndex];
             currentLevelRoundsLeft = currentLevel.numberOfRounds;
         }
         currentLevelRoundsLeft--;

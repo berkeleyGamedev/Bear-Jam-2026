@@ -21,6 +21,23 @@ public class ScoreTracker : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameManager.onGameStart += ResetScore;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.onGameStart -= ResetScore;
+    }
+
+    void ResetScore()
+    {
+        currentScore = 0;
+        currentComboTimer = 0;
+        currentCombo = 0;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

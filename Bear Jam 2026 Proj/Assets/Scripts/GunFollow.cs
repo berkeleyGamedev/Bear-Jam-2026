@@ -29,6 +29,7 @@ public class GunFollow : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (!GameManager.instance.GetIsGameActive()) return;
             Shoot();
         }
     }
@@ -55,6 +56,7 @@ public class GunFollow : MonoBehaviour
         {
             Debug.Log("Whiffed!");
             Instantiate(whiffPrefab, mousePos, Quaternion.identity);
+            GameManager.instance.LoseGame();
         }
 
         StopAllCoroutines();

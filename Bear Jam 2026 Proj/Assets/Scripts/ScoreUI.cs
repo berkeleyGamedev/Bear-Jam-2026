@@ -6,6 +6,7 @@ public class ScoreUI : MonoBehaviour
 {
     public Image comboMeter;
     public TextMeshProUGUI comboText;
+    public TextMeshProUGUI scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +19,7 @@ public class ScoreUI : MonoBehaviour
     {
         comboMeter.fillAmount = ExpDecay(comboMeter.fillAmount, ScoreTracker.instance.GetComboTimerRatio(), 24, Time.deltaTime);
         comboText.text = ScoreTracker.instance.GetCurrentCombo() + "x";
+        scoreText.text = ScoreTracker.instance.currentScore.ToString();
     }
 
     float ExpDecay(float a, float b, float decay, float dt)
