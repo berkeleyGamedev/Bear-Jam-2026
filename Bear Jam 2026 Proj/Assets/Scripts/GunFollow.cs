@@ -13,6 +13,8 @@ public class GunFollow : MonoBehaviour
     public float shootDuration;
     public float rotateAmount;
 
+    public GameObject whiffPrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,6 +51,10 @@ public class GunFollow : MonoBehaviour
             {
                 pinata.Takehit(mousePos);
             }
+        } else
+        {
+            Debug.Log("Whiffed!");
+            Instantiate(whiffPrefab, mousePos, Quaternion.identity);
         }
 
         StopAllCoroutines();

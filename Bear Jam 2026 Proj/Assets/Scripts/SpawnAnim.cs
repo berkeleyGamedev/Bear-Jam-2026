@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class SpawnAnim : MonoBehaviour
 {
+    public bool playAnimOnAwake;
     public float startScale;
     public float endScale;
     public float duration;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //StartCoroutine(Expand());
+        if (playAnimOnAwake)
+        {
+           StartCoroutine(Expand());
+        }
     }
 
     // Update is called once per frame
