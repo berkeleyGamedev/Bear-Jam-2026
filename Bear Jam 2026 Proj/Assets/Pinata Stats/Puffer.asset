@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50038683ad2d3d04086dd5c3f6eb0777, type: 3}
   m_Name: Puffer
   m_EditorClassIdentifier: Assembly-CSharp::PinataStats
-  health: 4
+  health: 5
   scoreOnDeath: 250
   startScale: 1
   scaleIncPerHit: 2
-  scaleMax: 3
+  scaleMax: 1.7
   startKBMult: 0.8
   KBMultIncPerHit: 5
-  KBMax: 3
-  sprites: []
+  KBMax: 10
+  sprites:
+  - {fileID: -8202321182927688060, guid: a7d4c04b4e165394d92444ef99681dcb, type: 3}
+  - {fileID: -8202321182927688060, guid: a7d4c04b4e165394d92444ef99681dcb, type: 3}

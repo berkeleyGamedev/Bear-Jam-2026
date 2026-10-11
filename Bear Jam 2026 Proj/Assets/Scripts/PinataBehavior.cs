@@ -7,10 +7,17 @@ public abstract class PinataBehavior : MonoBehaviour
     protected Vector2 knockbackVelocity;
 
     protected Rigidbody2D rb;
+    protected PinataHit hit;
 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        hit = GetComponent<PinataHit>();
+    }
+
+    protected virtual void Start()
+    {
+        StartCoroutine(Behaviors());
     }
 
     public virtual void FixedUpdate()
@@ -25,4 +32,6 @@ public abstract class PinataBehavior : MonoBehaviour
         knockbackVelocity = KB;
     }
     public abstract IEnumerator Behaviors();
+
+    public abstract void OnHit();
 }

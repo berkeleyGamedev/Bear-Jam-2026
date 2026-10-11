@@ -14,7 +14,7 @@ public class PinataHit : MonoBehaviour
     public delegate void OnHit(Vector2 mousePos);
     public static event OnHit onHit;
 
-    private float counter;
+    public int timesHit;
 
 
     private void Awake()
@@ -32,7 +32,7 @@ public class PinataHit : MonoBehaviour
         //Bandaid "spawn animation"
         transform.localScale = 0.1f * Vector3.one;
 
-        counter = 0;
+        timesHit = 0;
     }
 
     // Update is called once per frame
@@ -43,27 +43,16 @@ public class PinataHit : MonoBehaviour
         transform.localScale = ExpDecay(transform.localScale, targetScale, 16, Time.deltaTime);
     }
 
-    private void FixedUpdate()
-    {
-        if(counter < 2)
-        {
-            counter += Time.fixedDeltaTime;
-        } else
-        {
-            counter = 0;
-            //rb.linearVelocity += (Vector2)transform.up * 30;
-        }
-
-    }
-
 
     public void Takehit(Vector2 mousePos)
     {
+        timesHit++;
+        behavior.OnHit();
         onHit.Invoke(mousePos);
 
         Vector2 hitVector = mousePos - rb.position;
         hitVector = hitVector.normalized;
-        float theta = Random.Range(-20, 20);
+        float theta = Random.Range(0, 0);
         Vector2 rotatedVector = new Vector2(hitVector.x * Mathf.Cos(theta) - hitVector.y * Mathf.Sin(theta),
             hitVector.x * Mathf.Sin(theta) + hitVector.y * Mathf.Cos(theta));
         //rb.AddForce(-1 * hitVector.normalized * force, ForceMode2D.Impulse);
@@ -78,9 +67,27 @@ public class PinataHit : MonoBehaviour
         currentHealth -= 1;
         if(currentHealth <= 0)
         {
-            Destroy(gameObject);
+            OnDeath();
         }
+
+        ChangeSprite();
+
     }
+
+    void OnDeath()
+    {
+        PinataSpawner spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
+        spawner.SpawnNewPinata();
+        Destroy(gameObject);
+    }
+
+    void ChangeSprite()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (timesHit >= stats.sprites.Count) return;
+        sr.sprite = stats.sprites[timesHit];
+    }
+
 
     Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
     {
