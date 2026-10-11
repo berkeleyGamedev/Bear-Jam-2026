@@ -3,6 +3,7 @@ using UnityEngine;
 public class ScoreTracker : MonoBehaviour
 {
     public int currentScore;
+    public int totalCandy;
     [SerializeField] int currentCombo;
     [SerializeField] int maxCombo;
     [SerializeField] float comboTimer;
@@ -24,11 +25,14 @@ public class ScoreTracker : MonoBehaviour
     private void OnEnable()
     {
         GameManager.onGameStart += ResetScore;
+        GameManager.onGameLose += ConvertScoreToCandy;
+
     }
 
     private void OnDisable()
     {
         GameManager.onGameStart -= ResetScore;
+        GameManager.onGameLose -= ConvertScoreToCandy;
     }
 
     void ResetScore()
@@ -36,12 +40,19 @@ public class ScoreTracker : MonoBehaviour
         currentScore = 0;
         currentComboTimer = 0;
         currentCombo = 0;
+        maxCombo = GameManager.instance.HasExtraCombo ? 15 : 7;
+    }
+
+    void ConvertScoreToCandy()
+    {
+        totalCandy += currentScore;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentComboTimer = 0;
+        totalCandy = 0;
     }
 
     // Update is called once per frame

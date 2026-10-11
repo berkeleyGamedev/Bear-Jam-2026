@@ -32,7 +32,7 @@ public class SpawnAnim : MonoBehaviour
         
     }
 
-    IEnumerator Expand()
+    protected virtual IEnumerator Expand()
     {
         float t = 0;
         transform.localScale *= startScale;
@@ -51,7 +51,7 @@ public class SpawnAnim : MonoBehaviour
         StartCoroutine(Shrink());
     }
 
-    IEnumerator Shrink()
+    protected virtual IEnumerator Shrink()
     {
         float t = 0;
         Vector3 endTransform = Vector3.one * 0.01f;
@@ -65,7 +65,7 @@ public class SpawnAnim : MonoBehaviour
         Destroy(gameObject);
     }
 
-    Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
+    protected Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
     {
         return b + (a - b) * Mathf.Exp(-decay * dt);
     }

@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     private bool isGameActive;
 
+    [Header("Powerups")]
+    public bool HasGoldenTicket;
+    public bool HasExtraCombo;
+    public bool HasPlushieSoul;
+
     private void Awake()
     {
         if(instance== null)
@@ -52,6 +57,9 @@ public class GameManager : MonoBehaviour
     {
         //StartGame();
         Cursor.visible = false;
+        HasGoldenTicket = false;
+        HasExtraCombo = false;
+        HasPlushieSoul = false;
     }
 
     // Update is called once per frame

@@ -14,13 +14,39 @@ public class GunFollow : MonoBehaviour
     public float shootDuration;
     public float rotateAmount;
 
+    [Header("Plushie Soul")]
+    public int maxWhiffs;
+    private int numberOfWhiffs;
+
+    [Header("Golden Ticket")]
+    public float GoldenTicketSpawnChance;
+
+    [Header("Prefabs")]
+    public GameObject goldenTicketPrefab;
     public GameObject whiffPrefab;
     public GameObject hitParticles;
+    public GameObject plushieSoulPrefab;
+
+    private void OnEnable()
+    {
+        GameManager.onGameStart += ResetWhiffs;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.onGameStart -= ResetWhiffs;
+    }
+
+    void ResetWhiffs()
+    {
+        numberOfWhiffs = 0;
+        maxWhiffs = GameManager.instance.HasPlushieSoul ? 2 : 1;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //maxWhiffs = 1;
     }
 
     // Update is called once per frame
@@ -51,22 +77,48 @@ public class GunFollow : MonoBehaviour
 
         if (hit)
         {
-            if(hit.transform.TryGetComponent<PinataHit>(out PinataHit pinata))
+            if (hit.transform.TryGetComponent<GoldenTicket>(out GoldenTicket goldenTicket))
+            {
+                goldenTicket.TakeHit();
+            }
+
+            if (hit.transform.TryGetComponent<PinataHit>(out PinataHit pinata))
             {
                 Instantiate(hitParticles, mousePos, Quaternion.identity);
                 pinata.Takehit(mousePos);
+                SpawnGoldenTicket(mousePos);
             }
+
         } else
         {
             Debug.Log("Whiffed!");
-            Instantiate(whiffPrefab, mousePos, Quaternion.identity);
-            GameManager.instance.LoseGame();
+            numberOfWhiffs++;
+            if(numberOfWhiffs >= maxWhiffs)
+            {
+                Instantiate(whiffPrefab, mousePos, Quaternion.identity);
+                GameManager.instance.LoseGame();
+            }
+            else
+            {
+                Instantiate(plushieSoulPrefab, mousePos, Quaternion.identity);
+            }
+
         }
 
         StopAllCoroutines();
         StartCoroutine(ShootAnim());
     }
 
+    void SpawnGoldenTicket(Vector2 mousePos)
+    {
+        if (!GameManager.instance.HasGoldenTicket) return;
+        float chance = Random.Range(0f, 1f);
+        if(chance < GoldenTicketSpawnChance)
+        {
+            // We add the Vector3 here with -1 z so the raycast can always hit the golden ticket first and not a pinata behind it
+            Instantiate(goldenTicketPrefab, new Vector3(mousePos.x, mousePos.y, -1f), Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        }
+    }
 
     IEnumerator ShootAnim()
     {
