@@ -144,7 +144,7 @@ TextureImporter:
         width: 66
         height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,7 +166,7 @@ TextureImporter:
         width: 76
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,7 +188,7 @@ TextureImporter:
         width: 58
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,7 +210,7 @@ TextureImporter:
         width: 64
         height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,7 +232,7 @@ TextureImporter:
         width: 114
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_5
+      name: Revive_Icon
       rect:
         serializedVersion: 2
         x: 1125
@@ -254,7 +254,7 @@ TextureImporter:
         width: 247
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,7 +268,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_6
+      name: Ticket_Icon
       rect:
         serializedVersion: 2
         x: 213
@@ -276,7 +276,7 @@ TextureImporter:
         width: 411
         height: 235
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,37 +290,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_7
+      name: Cleanse_Icon
       rect:
         serializedVersion: 2
-        x: 701
-        y: 706
-        width: 34
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71b21ca12923da9f0800000000000000
-      internalID: -455652384199070953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: More_Art_8
-      rect:
-        serializedVersion: 2
-        x: 728
+        x: 703
         y: 495
-        width: 298
+        width: 323
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_9
+      name: Combo_Icon
       rect:
         serializedVersion: 2
         x: 1452
@@ -342,7 +320,7 @@ TextureImporter:
         width: 275
         height: 327
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,29 +334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_10
-      rect:
-        serializedVersion: 2
-        x: 725
-        y: 683
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c059c4d48a3944b70800000000000000
-      internalID: 8882386716142114060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: More_Art_11
+      name: Alien_Pinata
       rect:
         serializedVersion: 2
         x: 227
@@ -386,7 +342,7 @@ TextureImporter:
         width: 219
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: More_Art_12
+      name: Bird_Pinata
       rect:
         serializedVersion: 2
         x: 488
@@ -408,7 +364,7 @@ TextureImporter:
         width: 489
         height: 312
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,7 +381,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c84434eb69876b499eb490f2a28ec6c
     internalID: 0
     vertices: []
     indices: 
@@ -435,19 +391,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Alien_Pinata: -3728166742631359825
+      Bird_Pinata: -4257314089357860962
+      Cleanse_Icon: -8030675881967444566
+      Combo_Icon: -5407486432757654580
       More_Art_0: -8773921395233258149
       More_Art_1: 8787539577273640114
       More_Art_10: 8882386716142114060
-      More_Art_11: -3728166742631359825
-      More_Art_12: -4257314089357860962
       More_Art_2: 2831168691771016507
       More_Art_3: -2467927792621758621
       More_Art_4: 6978374885274416686
-      More_Art_5: 1042911034556611357
-      More_Art_6: -2953590303902723656
       More_Art_7: -455652384199070953
-      More_Art_8: -8030675881967444566
-      More_Art_9: -5407486432757654580
+      Revive_Icon: 1042911034556611357
+      Ticket_Icon: -2953590303902723656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
