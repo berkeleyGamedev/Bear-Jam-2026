@@ -50,6 +50,7 @@ public class PinataSpawner : MonoBehaviour
 
     IEnumerator SpawnPinata()
     {
+        if (!GameManager.instance.GetIsGameActive()) yield break;
         yield return new WaitForSeconds(spawnDelay);
         if (currentLevelRoundsLeft <= 0)
         {

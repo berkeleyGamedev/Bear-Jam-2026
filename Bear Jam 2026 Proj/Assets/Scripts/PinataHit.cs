@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PinataHit : MonoBehaviour
@@ -83,10 +84,22 @@ public class PinataHit : MonoBehaviour
         // FIX LATER !!!!!!!!!! THIS IS SPAGETTI BULLSHIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if(transform.parent.TryGetComponent<SpawnAnim>(out var spawnAnim))
         {
-            spawnAnim.DeathAnim();
+            spawnAnim.DeathAnim(stats.deathDelay);
         }
+        if (stats.deathDelay > 0)
+        {
+            StartCoroutine(DelayNewPinataSpawn(stats.deathDelay, spawner));
+        } else
+        {
+            spawner.SpawnNewPinata();
+        }
+    }
+
+    // INSTEAD OF HAVING A DELAY COROUTINE HERE, SHOULD JUST DELETE AND MAKE THE PINATA SPAWNER COROUTINE HANDLE THE DELAY!!!! FIX LATER!!!!!!!!!!!
+    IEnumerator DelayNewPinataSpawn(float delay, PinataSpawner spawner)
+    {
+        yield return new WaitForSeconds(delay);
         spawner.SpawnNewPinata();
-        Destroy(gameObject);
     }
 
     void ChangeSprite()

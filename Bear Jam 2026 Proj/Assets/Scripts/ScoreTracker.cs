@@ -77,6 +77,13 @@ public class ScoreTracker : MonoBehaviour
         currentCombo = Mathf.Clamp(currentCombo, 0, maxCombo);
     }
 
+    public void IncreaseCombo(int combo)
+    {
+        currentCombo += combo;
+        currentComboTimer = comboTimer;
+        currentCombo = Mathf.Clamp(currentCombo, 0, maxCombo);
+    }
+
     public void IncreaseScore(int score)
     {
         currentCombo++;

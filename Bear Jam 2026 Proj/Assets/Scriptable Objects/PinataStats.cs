@@ -6,6 +6,7 @@ public class PinataStats : ScriptableObject
 {
     public float health;
     public float scoreOnDeath;
+    public float deathDelay;
     [Header("Scale")]
     public float startScale;
     public float scaleIncPerHit;

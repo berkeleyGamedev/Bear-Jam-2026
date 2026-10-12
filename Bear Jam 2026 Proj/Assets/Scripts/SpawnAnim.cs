@@ -51,6 +51,11 @@ public class SpawnAnim : MonoBehaviour
         StartCoroutine(Shrink());
     }
 
+    public void DeathAnim(float delayDuration)
+    {
+        StartCoroutine(ShrinkDelay(delayDuration));
+    }
+
     protected virtual IEnumerator Shrink()
     {
         float t = 0;
@@ -63,6 +68,12 @@ public class SpawnAnim : MonoBehaviour
         }
         transform.localScale = endTransform;
         Destroy(gameObject);
+    }
+
+    IEnumerator ShrinkDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(Shrink());
     }
 
     protected Vector3 ExpDecay(Vector3 a, Vector3 b, float decay, float dt)
