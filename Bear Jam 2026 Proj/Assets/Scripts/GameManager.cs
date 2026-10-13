@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool HasGoldenTicket;
     public bool HasExtraCombo;
     public bool HasPlushieSoul;
+    public bool WonGame;
 
     private void Awake()
     {

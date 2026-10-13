@@ -6,6 +6,9 @@ public class CutsceneUI : MonoBehaviour
 {
     public List<Transform> children;
     private int index;
+
+    public AudioSource introSource;
+    public AudioSource gameplaySource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,8 +29,10 @@ public class CutsceneUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(index >= children.Count)
+            if(index >= children.Count - 1)
             {
+                introSource.gameObject.SetActive(false);
+                gameplaySource.gameObject.SetActive(true);
                 gameObject.SetActive(false);
                 return;
             }

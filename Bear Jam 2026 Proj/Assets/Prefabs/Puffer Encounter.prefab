@@ -407,6 +407,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: a2b4d1437f27ee049a8cb73b78a3b4da, type: 2}
   currentHealth: 0
   timesHit: 0
+  ScorePrefab: {fileID: 3061844530532425828, guid: ea40bad318288ff40bc0af1ad5110e71, type: 3}
 --- !u!114 &6624404428919101573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1450,6 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d110acc42d1c54794f317d44369574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnim
+  playAnimOnStart: 0
   startScale: 0
   endScale: 0
   duration: 0

@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class MenuUI : MonoBehaviour
@@ -6,6 +7,8 @@ public class MenuUI : MonoBehaviour
     public GameObject menuPanel;
     public GameObject playPanel;
     public GameObject shopPanel;
+    public TextMeshProUGUI lastRoundScore;
+    public TextMeshProUGUI highScore;
     public float edgePosition;
 
     private void OnEnable()
@@ -23,12 +26,21 @@ public class MenuUI : MonoBehaviour
     void TogglePanel()
     {
         //menuPanel.SetActive(!GameManager.instance.GetIsGameActive());
+
+        lastRoundScore.text = "Last Round Score: " + ScoreTracker.instance.currentScore;
+        highScore.text = "Highscore: " + ScoreTracker.instance.highScore;
+
         float start = (GameManager.instance.GetIsGameActive()) ? 0 : -1000;
         float end = (GameManager.instance.GetIsGameActive()) ? -1000 : 0;
         Vector2 startPos = Vector2.up * start;
         Vector2 endPos = Vector2.up * end;
         StopAllCoroutines();
         StartCoroutine(PanelAnim(menuPanel, startPos, endPos, true));
+    }
+
+    private void Update()
+    {
+        highScore.text = "Highscore: " + ScoreTracker.instance.highScore;
     }
 
     public void ToggleShop(bool shopVisible)

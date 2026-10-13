@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.1842, y: -1.1173, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnim
   playAnimOnStart: 1
   startScale: 0.1
-  endScale: 0.4
+  endScale: 0.5
   duration: 0
 --- !u!114 &54651811664583868
 MonoBehaviour:
@@ -200,3 +200,4 @@ MonoBehaviour:
   upwardVelocity: 10
   xVelocityRange: 2.3
   angularVelocityRange: 180
+  cashPrefab: {fileID: 7605301702707873976, guid: b6bace7771f23ee408a5ec6ef82d0ed7, type: 3}

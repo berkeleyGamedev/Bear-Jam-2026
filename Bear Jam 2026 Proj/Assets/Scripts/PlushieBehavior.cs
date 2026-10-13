@@ -7,12 +7,14 @@ public class PlushieBehavior : PinataBehavior
 
     private SpawnAnim spawnAnim;
     private PinataSpawner spawner;
+    private AudioSource source;
 
     protected override void Awake()
     {
         base.Awake();
         spawnAnim = transform.parent.GetComponent<SpawnAnim>();
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
+        source = GetComponent<AudioSource>();
     }
 
     public override void OnHit()
@@ -26,6 +28,7 @@ public class PlushieBehavior : PinataBehavior
     {
         yield return new WaitForSeconds(waitTime);
         ScoreTracker.instance.IncreaseCombo(4);
+        source.Play();
         spawnAnim.DeathAnim(0.2f);
         spawner.SpawnNewPinata();
 

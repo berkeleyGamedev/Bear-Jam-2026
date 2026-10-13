@@ -6,6 +6,7 @@ public class GoldenTicket : MonoBehaviour
     public float upwardVelocity;
     public float xVelocityRange;
     public float angularVelocityRange;
+    public GameObject cashPrefab;
 
     private Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,6 +31,7 @@ public class GoldenTicket : MonoBehaviour
     public void TakeHit()
     {
         ScoreTracker.instance.IncreaseScore(scoreValue);
+        Instantiate(cashPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

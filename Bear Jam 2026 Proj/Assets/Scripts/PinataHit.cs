@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class PinataHit : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PinataHit : MonoBehaviour
     public static event OnHit onHit;
 
     public int timesHit;
+    public GameObject ScorePrefab;
 
 
     private void Awake()
@@ -79,6 +81,9 @@ public class PinataHit : MonoBehaviour
 
     void OnDeath()
     {
+        TextMeshPro scoretext = Instantiate(ScorePrefab, transform.position, Quaternion.identity).GetComponent<TextMeshPro>();
+        scoretext.text = (stats.scoreOnDeath * ScoreTracker.instance.GetCurrentCombo()).ToString();
+
         PinataSpawner spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
 
         // FIX LATER !!!!!!!!!! THIS IS SPAGETTI BULLSHIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

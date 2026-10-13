@@ -993,6 +993,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: fb59de8c0b7093f4f9030c28397f4a51, type: 2}
   currentHealth: 0
   timesHit: 0
+  ScorePrefab: {fileID: 3061844530532425828, guid: ea40bad318288ff40bc0af1ad5110e71, type: 3}
 --- !u!114 &2467616180879012564
 MonoBehaviour:
   m_ObjectHideFlags: 0

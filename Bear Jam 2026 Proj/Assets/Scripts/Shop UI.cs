@@ -6,8 +6,10 @@ public class ShopUI : MonoBehaviour
     public GameObject GoldenTicketButton;
     public GameObject ExtraComboButton;
     public GameObject PlushieSoulButton;
+    public GameObject CleanseButton;
     public TextMeshProUGUI DescriptionText;
     public TextMeshProUGUI CandyText;
+    public GameObject WinCanvas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,6 +64,19 @@ public class ShopUI : MonoBehaviour
         Debug.Log("Bought Plushie Soul");
         GameManager.instance.HasPlushieSoul = true;
         TextMeshProUGUI buttonText = PlushieSoulButton.GetComponentInChildren<TextMeshProUGUI>();
+        if (buttonText != null)
+        {
+            buttonText.text = "SOLD";
+        }
+    }
+
+    public void BuyCleanse(int cost)
+    {
+        if (GameManager.instance.WonGame) return;
+        if (ScoreTracker.instance.totalCandy < cost) return;
+        GameManager.instance.WonGame = true;
+        WinCanvas.SetActive(true);
+        TextMeshProUGUI buttonText = CleanseButton.GetComponentInChildren<TextMeshProUGUI>();
         if (buttonText != null)
         {
             buttonText.text = "SOLD";

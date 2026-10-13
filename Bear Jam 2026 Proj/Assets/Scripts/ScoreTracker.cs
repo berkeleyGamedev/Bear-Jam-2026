@@ -4,6 +4,7 @@ public class ScoreTracker : MonoBehaviour
 {
     public int currentScore;
     public int totalCandy;
+    public int highScore;
     [SerializeField] int currentCombo;
     [SerializeField] int maxCombo;
     [SerializeField] float comboTimer;
@@ -46,6 +47,10 @@ public class ScoreTracker : MonoBehaviour
     void ConvertScoreToCandy()
     {
         totalCandy += currentScore;
+        if(highScore < currentScore)
+        {
+            highScore = currentScore;
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,6 +58,7 @@ public class ScoreTracker : MonoBehaviour
     {
         currentComboTimer = 0;
         totalCandy = 0;
+        highScore = 0;
     }
 
     // Update is called once per frame
