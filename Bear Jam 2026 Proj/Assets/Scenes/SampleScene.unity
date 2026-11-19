@@ -3050,6 +3050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunFollow
   offset: {x: 3.7, y: -4.3}
+  YLowerHandThreshold: -1.45
+  LowerHandMaxDistance: 2
   crosshairTransform: {fileID: 394121462}
   source: {fileID: 795197159}
   shootCurve:

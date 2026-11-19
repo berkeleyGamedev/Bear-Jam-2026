@@ -6,6 +6,8 @@ public class GunFollow : MonoBehaviour
 {
     private Vector2 mousePos;
     public Vector2 offset;
+    public float YLowerHandThreshold;
+    public float LowerHandMaxDistance;
     public Transform crosshairTransform;
     public AudioSource source;
 
@@ -64,7 +66,9 @@ public class GunFollow : MonoBehaviour
 
     void UpdatePos()
     {
-        Vector2 finalPos = new Vector2(mousePos.x, 0.3f * Mathf.Cos(1.4f * mousePos.x));
+        float yOffest = mousePos.y > YLowerHandThreshold ? 0 : YLowerHandThreshold - mousePos.y;
+        yOffest = Mathf.Clamp(yOffest, 0, LowerHandMaxDistance);
+        Vector2 finalPos = new Vector2(mousePos.x, 0.3f * Mathf.Cos(1.4f * mousePos.x) - yOffest);
         transform.position = finalPos + offset;
     }
 
@@ -131,5 +135,13 @@ public class GunFollow : MonoBehaviour
             yield return null;
         }
         transform.rotation = Quaternion.identity;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.deepPink;
+        Vector3 drawPoint = Vector3.right * 100f + YLowerHandThreshold * Vector3.up;
+        Vector3 drawPoint2 = Vector3.right * -100f + YLowerHandThreshold * Vector3.up;
+        Gizmos.DrawLine(drawPoint, drawPoint2);
     }
 }
