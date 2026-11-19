@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PinataHit
   force: 15
-  stats: {fileID: 11400000, guid: fb59de8c0b7093f4f9030c28397f4a51, type: 2}
+  stats: {fileID: 11400000, guid: 888c90157e76f5747bd12dd9de0e5489, type: 2}
   currentHealth: 0
   timesHit: 0
   ScorePrefab: {fileID: 3061844530532425828, guid: ea40bad318288ff40bc0af1ad5110e71, type: 3}

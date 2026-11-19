@@ -17,7 +17,7 @@ public class PinataHit : MonoBehaviour
     public static event OnHit onHit;
 
     public int timesHit;
-    public GameObject ScorePrefab;
+    private GameObject ScorePrefab;
 
 
     private void Awake()
