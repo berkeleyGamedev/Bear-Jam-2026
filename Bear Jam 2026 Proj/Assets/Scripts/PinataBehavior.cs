@@ -34,4 +34,9 @@ public abstract class PinataBehavior : MonoBehaviour
     public abstract IEnumerator Behaviors();
 
     public abstract void OnHit();
+
+    public virtual void OnDeath()
+    {
+
+    }
 }

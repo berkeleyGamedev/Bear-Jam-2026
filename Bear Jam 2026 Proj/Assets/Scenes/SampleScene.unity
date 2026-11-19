@@ -2365,6 +2365,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641611620}
   m_CullTransparentMesh: 1
+--- !u!1001 &642627154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 800596958737916501, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800596958737916501, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013332235012799458, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013332235012799458, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5805686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484981794836233992, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699993727555817250, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699993727555817250, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.28000045
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938135842627736752, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.57886344
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938135842627736752, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423863381368573377, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423863381368573377, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.42999983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609714887876826126, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609714887876826126, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524647819687208425, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524647819687208425, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154595486737080810, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_Name
+      value: Alien Pinata Encounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414458920285478614, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
 --- !u!1 &668295823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,7 +4364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1195354997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5372,9 +5489,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PinataSpawner
   pinataNumber: 0
   levels:
-  - numberOfRounds: 3
+  - numberOfRounds: 5
     prefabPool:
-    - {fileID: 8154595486737080810, guid: e98f633dba20a974eb8fcc85f08da072, type: 3}
+    - {fileID: 8154595486737080810, guid: e14c97f037a92e944bc162f19dc8d60e, type: 3}
   - numberOfRounds: 1
     prefabPool:
     - {fileID: 8155962600753728493, guid: 0ff7aeac527b85241a3474934f826c17, type: 3}
@@ -5384,11 +5501,8 @@ MonoBehaviour:
     - {fileID: 8154595486737080810, guid: 75f1a994d6fb366468fa064060ee24ea, type: 3}
   - numberOfRounds: 1
     prefabPool:
-    - {fileID: 8154595486737080810, guid: 75f1a994d6fb366468fa064060ee24ea, type: 3}
-  - numberOfRounds: 1
-    prefabPool:
     - {fileID: 8154595486737080810, guid: 12ff07f70595fb74597f3d5e137fe477, type: 3}
-  - numberOfRounds: 3
+  - numberOfRounds: 2
     prefabPool:
     - {fileID: 8154595486737080810, guid: 75f1a994d6fb366468fa064060ee24ea, type: 3}
     - {fileID: 8154595486737080810, guid: 12ff07f70595fb74597f3d5e137fe477, type: 3}
@@ -5404,7 +5518,7 @@ MonoBehaviour:
     - {fileID: 8155962600753728493, guid: 0ff7aeac527b85241a3474934f826c17, type: 3}
     - {fileID: 8155962600753728493, guid: 281655bcd60019449b01ea634f9a379f, type: 3}
     - {fileID: 8154595486737080810, guid: 12ff07f70595fb74597f3d5e137fe477, type: 3}
-    - {fileID: 8154595486737080810, guid: 7a97b19e7458b0242aebaf0bd5f411f8, type: 3}
+    - {fileID: 7742675248385428233, guid: 6dc0628e0863a6e45aa2a8e86130d9aa, type: 3}
     - {fileID: 8154595486737080810, guid: 2203c5daeff49464197b67735b21ce87, type: 3}
     - {fileID: 8154595486737080810, guid: 4f877aa7401e4394ca2c93592e04df38, type: 3}
   spawnDelay: 0.55
@@ -7883,6 +7997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Player Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 3839037593999976460, guid: f12213b02bdec6349ba9cf97cbb34345, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8213,6 +8331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pinata Encounter Anchor
       objectReference: {fileID: 0}
+    - target: {fileID: 1255159849496714140, guid: fe2029656e6627f458d8b09bf6d8a2f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1761699462151123443, guid: fe2029656e6627f458d8b09bf6d8a2f5, type: 3}
       propertyPath: radius
       value: 1.78
@@ -8334,3 +8456,4 @@ SceneRoots:
   - {fileID: 1550427830667105599}
   - {fileID: 8095606121825273570}
   - {fileID: 2869568270800171276}
+  - {fileID: 642627154}

@@ -438,7 +438,7 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 360
---- !u!1 &3387592565942323933
+--- !u!1 &3411905967011179640
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 405115383399957859}
+  - component: {fileID: 8365159565011114460}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -454,16 +454,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &405115383399957859
+--- !u!4 &8365159565011114460
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3387592565942323933}
+  m_GameObject: {fileID: 3411905967011179640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: 0.61, z: 0}
+  m_LocalPosition: {x: 1.32, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -947,7 +947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 405115383399957859}
+  - {fileID: 8365159565011114460}
   m_Father: {fileID: 2484981794836233992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4682027732978799861
@@ -1039,8 +1039,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketBehavior
   rocketVelocity: 1
+  maxVelocity: 25
   smokePrefab: {fileID: 6006372932956160596, guid: 098d946d384751b47ac8427ca21c0086, type: 3}
-  target: {fileID: 405115383399957859}
+  target: {fileID: 8365159565011114460}
 --- !u!114 &5261981972667165576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,6 +1276,7 @@ GameObject:
   - component: {fileID: 8178154050709564447}
   - component: {fileID: 7882350947861789883}
   - component: {fileID: 3938135842627736752}
+  - component: {fileID: 8659600509052650367}
   m_Layer: 0
   m_Name: Anchor
   m_TagString: Untagged
@@ -1351,6 +1353,50 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &8659600509052650367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7242333361818954329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60be1da0c4599384aa2875c283f6f79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnchorBehavior
+  behavior: 1
+  duration: 2
+  startPoint: {x: 1.33, y: 0}
+  endPoint: {x: -3, y: 0}
+  lerpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  origin: {x: 0, y: 2.6}
+  xAxis: 2
+  yAxis: 1.38
+  rotateSpeed: 2.2
 --- !u!1 &7302321096053536617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1554,7 @@ GameObject:
   - component: {fileID: 2484981794836233992}
   - component: {fileID: 6475634738634972684}
   m_Layer: 0
-  m_Name: Rocket Pinata Encounter
+  m_Name: Rocket Pinata Encounter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

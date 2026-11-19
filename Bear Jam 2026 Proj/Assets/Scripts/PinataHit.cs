@@ -5,7 +5,7 @@ using TMPro;
 public class PinataHit : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private PinataBehavior behavior;
+    private PinataBehavior behavior; // Bro you already have events for this shit lmao, dont need a manual reference
     public float force;
 
     public PinataStats stats;
@@ -27,6 +27,8 @@ public class PinataHit : MonoBehaviour
         currentScale = stats.startScale;
         currentKBMult = stats.startKBMult;
         currentHealth = stats.health;
+
+        ScorePrefab = Resources.Load<GameObject>("Prefabs/Score Text");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -85,6 +87,8 @@ public class PinataHit : MonoBehaviour
         scoretext.text = (stats.scoreOnDeath * ScoreTracker.instance.GetCurrentCombo()).ToString();
 
         PinataSpawner spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<PinataSpawner>();
+
+        behavior.OnDeath(); // replace with an event invoke next time
 
         // FIX LATER !!!!!!!!!! THIS IS SPAGETTI BULLSHIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if(transform.parent.TryGetComponent<SpawnAnim>(out var spawnAnim))
